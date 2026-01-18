@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klyn </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">Klyn</div>
+        <div class="lang-switch">
+            <button id="lang-ar">عربي</button>
+            <button id="lang-en">EN</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home" data-ar="الرئيسيه" data-en="Home">الرئيسيه</a></li>
+                <li><a href="#products" data-ar="المنتجات" data-en="Products">المنتجات</a></li>
+                <li><a href="#contact" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
+                </li>
+                <li><a href="#about" data-ar="من نحن" data-en="About Us">من نحن</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home -->
+        <section id="home" class="hero">
+            <h1 data-ar="مرحبا بكم في Klyn" data-en="Welcome to Klyn">مرحبا بكم في Klyn</h1>
+            <p data-ar="سلة الطلبات الخاصة بك" data-en="Your shopping cart">سلة الطلبات الخاصة بك</p>
+            <div id="cart" class="cart">السلة فارغة</div>
+            <div id="cart-container">
+                <button id="clear-cart-btn" style="display:none;">حذف كل المنتجات</button>
+            </div>
+        </section>
+
+        <!-- Products -->
+        <section id="products">
+            <h2 data-ar="هوديز" data-en="Hoodies">هوديز</h2>
+            <div class="product-carousel">
+                <button class="carousel-btn prev">&#10094;</button>
+                <div class="product-track">
+                    <!-- Product 1 -->
+                    <div class="product-card">
+                        <img src="https://i.postimg.cc/tgWQxsTq/a-beige-hoodie-with.png" alt="Hoodie 1">
+                        <h3 data-ar="هودي أسود Minimal" data-en="Black Minimal Hoodie" data-price="700">هودي أسود
+                            Minimal</h3>
+                        <p data-ar="Slim Fit | Plain | Minimal" data-en="Slim Fit | Plain">Slim Fit | Plain |
+                            Minimal</p>
+                        <p class="product-price">السعر: 700 جنيه</p> <!-- هنا كتبنا السعر -->
+                        <label><span data-ar="اللون:" data-en="Color:">اللون:</span>
+                            <select class="color-select">
+                                <option value="اسود" data-ar="أسود" data-en="Black">أسود</option>
+                            </select>
+                        </label>
+                        <label><span data-ar="المقاس:" data-en="Size:">المقاس:</span>
+                            <select class="size-select">
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                            </select>
+                        </label>
+                        <label><span data-ar="الكمية:" data-en="Quantity:">الكمية:</span>
+                            <input type="number" class="quantity" min="1" value="1">
+                        </label>
+                        <button class="add-cart-btn" data-ar="أضف للسلة" data-en="Add to Cart">أضف للسلة</button>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                        <img src="https://i.postimg.cc/zf0MWTrs/a-beige-hoodie-isola.png" alt="Hoodie 2">
+                        <h3 data-ar="هودي ابيض Classic" data-en="White Classic Hoodie" data-price="700">هودي ابيض
+                            Classic</h3>
+                        <p data-ar="Regular Fit | Plain" data-en="Regular Fit | Plain">Regular Fit | Plain</p>
+                        <p class="product-price">السعر: 700 جنيه</p> <!-- هنا كتبنا السعر -->
+                        <label><span data-ar="اللون:" data-en="Color:">اللون:</span>
+                            <select class="color-select">
+                                <option value="ابيض" data-ar="أبيض" data-en="White">أبيض</option>
+                            </select>
+                        </label>
+                        <label><span data-ar="المقاس:" data-en="Size:">المقاس:</span>
+                            <select class="size-select">
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                            </select>
+                        </label>
+                        <label><span data-ar="الكمية:" data-en="Quantity:">الكمية:</span>
+                            <input type="number" class="quantity" min="1" value="1">
+                        </label>
+                        <button class="add-cart-btn" data-ar="أضف للسلة" data-en="Add to Cart">أضف للسلة</button>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card">
+                        <img src="https://i.postimg.cc/Qdj0bV0Q/a-beige-hoodie-with.png" alt="Hoodie 3">
+                        <h3 data-ar="هودي بيج Classic" data-en="Beige Classic Hoodie" data-price="700">هودي بيج Classic
+                        </h3>
+                        <p data-ar="Regular Fit | Plain" data-en="Regular Fit | Plain">Regular Fit | Plain</p>
+                        <p class="product-price">السعر: 700 جنيه</p> <!-- هنا كتبنا السعر -->
+                        <label><span data-ar="اللون:" data-en="Color:">اللون:</span>
+                            <select class="color-select">
+                                <option value="بيج" data-ar="بيج" data-en="Beige">بيج</option>
+                            </select>
+                        </label>
+                        <label><span data-ar="المقاس:" data-en="Size:">المقاس:</span>
+                            <select class="size-select">
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                            </select>
+                        </label>
+                        <label><span data-ar="الكمية:" data-en="Quantity:">الكمية:</span>
+                            <input type="number" class="quantity" min="1" value="1">
+                        </label>
+                        <button class="add-cart-btn" data-ar="أضف للسلة" data-en="Add to Cart">أضف للسلة</button>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card">
+                        <img src="https://i.postimg.cc/qBLtKRhm/a-gray-hoodie-with.png" alt="Hoodie 4">
+                        <h3 data-ar="هودي رمادي Classic" data-en="Gray Classic Hoodie" data-price="700">هودي رمادي
+                            Classic</h3>
+                        <p data-ar="Regular Fit | Plain" data-en="Regular Fit | Plain">Regular Fit | Plain</p>
+                        <p class="product-price">السعر: 700 جنيه</p> <!-- هنا كتبنا السعر -->
+                        <label><span data-ar="اللون:" data-en="Color:">اللون:</span>
+                            <select class="color-select">
+                                <option value="رمادي" data-ar="رمادي" data-en="Gray">رمادي</option>
+                            </select>
+                        </label>
+                        <label><span data-ar="المقاس:" data-en="Size:">المقاس:</span>
+                            <select class="size-select">
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                            </select>
+                        </label>
+                        <label><span data-ar="الكمية:" data-en="Quantity:">الكمية:</span>
+                            <input type="number" class="quantity" min="1" value="1">
+                        </label>
+                        <button class="add-cart-btn" data-ar="أضف للسلة" data-en="Add to Cart">أضف للسلة</button>
+                    </div>
+                </div>
+                <button class="carousel-btn next">&#10095;</button>
+            </div>
+        </section>
+
+
+        <section id="about">
+            <div class="about-container">
+                <h2 data-ar="من نحن" data-en="About Us">من نحن</h2>
+
+                <h3 data-ar="من نحن" data-en="Who We Are">من نحن</h3>
+                <p data-ar="في Klyn، نؤمن أن الأناقة لا تحتاج إلى تعقيد. نقدّم هوديز وملابس عصرية بتصميمات بسيطة وجودة عالية تناسب أسلوب حياتك اليومي وتعبّر عن شخصيتك."
+                    data-en="At Klyn, we believe that style doesn’t have to be complicated. We create modern hoodies and apparel with clean designs and high-quality materials that fit your everyday lifestyle and express who you are.">
+                    في Klyn، نؤمن أن الأناقة لا تحتاج إلى تعقيد. نقدّم هوديز وملابس عصرية بتصميمات بسيطة وجودة عالية
+                    تناسب أسلوب حياتك اليومي وتعبّر عن شخصيتك.
+                </p>
+
+                <h3 data-ar="رؤيتنا" data-en="Our Vision">رؤيتنا</h3>
+                <p data-ar="أن نكون من العلامات الرائدة في عالم الملابس الشبابية، من خلال تقديم ستايل عصري يجمع بين البساطة، الراحة، والجودة."
+                    data-en="To become a leading youth fashion brand by delivering modern styles that combine simplicity, comfort, and quality.">
+                    أن نكون من العلامات الرائدة في عالم الملابس الشبابية، من خلال تقديم ستايل عصري يجمع بين البساطة،
+                    الراحة، والجودة.
+                </p>
+
+                <h3 data-ar="رسالتنا" data-en="Our Mission">رسالتنا</h3>
+                <p data-ar="نسعى لتقديم تجربة تسوق سهلة وممتعة، مع الاهتمام بأدق التفاصيل في التصميم والخامات، لضمان منتج يدوم ويليق بك."
+                    data-en="We aim to offer a smooth and enjoyable shopping experience, focusing on every detail—from design to fabric—to deliver products you can trust and wear with confidence.">
+                    نسعى لتقديم تجربة تسوق سهلة وممتعة، مع الاهتمام بأدق التفاصيل في التصميم والخامات، لضمان منتج يدوم
+                    ويليق بك.
+                </p>
+
+                <h3 data-ar="لماذا Klyn؟" data-en="Why Klyn?">لماذا Klyn؟</h3>
+                <ul>
+                    <li data-ar="تصميمات بسيطة وعصرية" data-en="Clean and modern designs">تصميمات بسيطة وعصرية ✅</li>
+                    <li data-ar="خامات مريحة وجودة عالية" data-en="Comfortable, high-quality materials">خامات مريحة
+                        وجودة عالية ✅</li>
+                    <li data-ar="أسعار مناسبة" data-en="Affordable prices">أسعار مناسبة ✅</li>
+                    <li data-ar="خدمة عملاء سريعة وموثوقة" data-en="Reliable and fast customer support">خدمة عملاء سريعة
+                        وموثوقة ✅</li>
+                </ul>
+            </div>
+        </section>
+
+
+
+
+
+        <!-- قسم Contact / بيانات العميل -->
+        <section id="contact">
+            <h2 data-ar="بيانات العميل" data-en="Customer Info">بيانات العميل</h2>
+            <form id="customerForm" class="customer-form">
+                <div class="form-row">
+                    <label data-ar="الاسم:" data-en="Name:">الاسم:
+                        <input type="text" id="name" required>
+                    </label>
+                    <label data-ar="رقم الهاتف 1:" data-en="Phone 1:">رقم الهاتف 1:
+                        <input type="tel" id="phone1" required>
+                    </label>
+                </div>
+                <div class="form-row">
+                    <label data-ar="رقم الهاتف 2:" data-en="Phone 2:">رقم الهاتف 2:
+                        <input type="tel" id="phone2" required>
+                    </label>
+
+                </div>
+                <div class="form-row">
+                    <label data-ar="المحافظة:" data-en="City:">المحافظة:
+                        <input type="text" id="city" required>
+                    </label>
+                    <label data-ar="الشارع:" data-en="Street:">الشارع:
+                        <input type="text" id="street" required>
+                    </label>
+                </div>
+                <div class="form-row">
+                    <label data-ar="المنطقة:" data-en="Area:">المنطقة:
+                        <input type="text" id="area" required>
+                    </label>
+                    <label data-ar="ملاحظات:" data-en="Notes:">ملاحظات:
+                        <textarea id="notes" placeholder="اختياري"></textarea>
+                    </label>
+                </div>
+                <button type="submit" class="btn send-btn" data-ar="اطلب الآن" data-en="Order Now">اطلب الآن</button>
+            </form>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Klyn Hoodies. كل الحقوق محفوظة.</p>
+        <h3>klyn</h3>
+        <p> كل ال نفسك فيه في مكان واحد للشياكه و الاناقه عنوان</p>
+        <div>
+            <h4>مشاريعي</h4>
+            <ul>
+                <li><a href="https://khaled854.github.io/profile/" target="_blank">
+                        اضغط علي الكلام عشان تشوف مشاريعي========> مشاريعي خش بص بصه
+                    </a></li>
+                <li><a href="https://www.linkedin.com/in/khaled-taha-0a2a41389" target="_blank">
+                        اضغط علي الكلام عشان نطلب موقعك========> تابع معايا لطلب موقعك الخاص
+                    </a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

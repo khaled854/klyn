@@ -1,0 +1,396 @@
+/* ===== قاعدة عامة ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== الألوان ===== */
+:root {
+    --primary: #f5f5f5;
+    --secondary: #e0e0e0;
+    --accent: #333;
+    --text: #111;
+    --btn: #222;
+    --btn-hover: #555;
+    --btn-cart: #fff;
+    --btn-cart-hover: #ddd;
+}
+
+/* ===== الجسم ===== */
+body {
+    background: var(--primary);
+    color: var(--text);
+    direction: rtl;
+    line-height: 1.6;
+}
+
+/* ===== الهيدر ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: var(--secondary);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    flex-wrap: wrap;
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+}
+
+header nav ul li a:hover {
+    color: var(--accent);
+}
+
+/* ===== Hero ===== */
+.hero {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+/* ===== Cart ===== */
+.cart {
+    background: var(--secondary);
+    padding: 20px;
+    border-radius: 12px;
+    min-height: 70px;
+    font-size: 1.2rem;
+    /* تكبير الخط */
+    margin: 20px;
+}
+
+#clear-cart-btn {
+    background: var(--btn-cart);
+    color: #000;
+    padding: 10px 16px;
+    margin-top: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    font-size: 1.1rem;
+    transition: .3s;
+}
+
+#clear-cart-btn:hover {
+    background: var(--btn-cart-hover);
+}
+
+.btn {
+    background: var(--btn);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: var(--btn-hover);
+}
+
+.send-btn {
+    color: #fff !important;
+}
+
+/* ===== Carousel ===== */
+.product-carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 20px 0;
+    touch-action: pan-x;
+}
+
+.product-track {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+}
+
+.product-track::-webkit-scrollbar {
+    display: none;
+}
+
+.product-card {
+    background: var(--secondary);
+    padding: 15px;
+    border-radius: 10px;
+    flex: 0 0 auto;
+    width: 280px;
+    /* أكبر حجم الكارت */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    scroll-snap-align: start;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    /* تكبير الخط */
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.product-card p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.product-card .product-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ff4d4d;
+    margin-top: 5px;
+}
+
+.add-cart-btn {
+    background: var(--btn-cart);
+    color: #000;
+    margin-top: 10px;
+    padding: 10px 16px;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-cart-btn:hover {
+    background: var(--btn-cart-hover);
+}
+
+.product-card label {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.product-card input.quantity,
+.product-card select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    margin-top: 3px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+/* ===== Carousel Buttons ===== */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--btn);
+    color: #fff;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.carousel-btn:hover {
+    background: var(--btn-hover);
+    opacity: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* ===== About Section ===== */
+#about {
+    padding: 80px 20px;
+    background: #f9f9f9;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+#about .about-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+#about h2 {
+    font-size: 36px;
+    color: #222;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+#about h3 {
+    font-size: 24px;
+    color: #ff4d4d;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+#about p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#about ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#about ul li {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+    position: relative;
+    padding-left: 25px;
+}
+
+#about ul li::before {
+    content: "✅";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 18px;
+}
+
+/* ===== Contact ===== */
+#contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.customer-form {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: var(--secondary);
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.customer-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+#contact input,
+#contact textarea,
+#contact select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#contact textarea {
+    min-height: 120px;
+}
+
+.send-btn {
+    background: var(--btn-cart);
+    color: #000;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.send-btn:hover {
+    background: var(--btn-cart-hover);
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--secondary);
+    color: #555;
+}
+
+/* ===== Responsive ===== */
+@media(max-width:768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .product-card {
+        width: 220px;
+        font-size: 1rem;
+    }
+}
+
+@media(max-width:480px) {
+    .product-card {
+        width: 180px;
+        font-size: 0.95rem;
+    }
+
+    .carousel-btn {
+        padding: 8px;
+        font-size: 1rem;
+    }
+}
